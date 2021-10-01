@@ -30,16 +30,19 @@ public class CollectionTestSuite {
     @DisplayName("Empty list check")
     @Test
     void testOddNumbersExterminatorEmptyList(){
+                //Given
         List<Integer> emptyList = new ArrayList<>();
-        List<Integer> emptyListReference = new ArrayList<>();
-        OddNumbersExterminator evenListE = new OddNumbersExterminator();
-        List<Integer> evenEmptyList = evenListE.createList(emptyList);
-        Assertions.assertEquals(emptyListReference, evenEmptyList);
+        OddNumbersExterminator emptyListToTest = new OddNumbersExterminator();
+                //When
+        List<Integer> evenEmptyList = emptyListToTest.createList(emptyList);
+                //Then
+        Assertions.assertTrue(evenEmptyList.isEmpty());
 
     }
     @DisplayName("Normal list check")
     @Test
     void testOddNumbersExterminatorNormalList(){
+                //Given
         List<Integer> normalList = new ArrayList<>();
         normalList.add(5);
         normalList.add(3);
@@ -57,16 +60,17 @@ public class CollectionTestSuite {
         normalListReference.add(8);
         normalListReference.add(4);
 
-        OddNumbersExterminator evenListN = new OddNumbersExterminator();
-        List<Integer> oddNormalList = evenListN.createList(normalList);
-
+        OddNumbersExterminator normalListToTest = new OddNumbersExterminator();
+                //When
+        List<Integer> oddNormalList = normalListToTest.createList(normalList);
+                //Then
         Assertions.assertEquals(normalListReference, oddNormalList);
     }
 
     @DisplayName("Normal list check using Array.asList()")
     @Test
     void testOddNumbersExterminatorNormalListWithArray(){
-
+                //Given
         Integer[] allNumbers = new Integer[] {5, 2, 6, 12, 7, 35, 93, 0, 13};
 
         List<Integer> normalList = Arrays.asList(allNumbers);
@@ -75,9 +79,10 @@ public class CollectionTestSuite {
         List<Integer> normalListReference = Arrays.asList(evenNumbers);
 
 
-        OddNumbersExterminator evenListN = new OddNumbersExterminator();
-        List<Integer> evenNormalList = evenListN.createList(normalList);
-
+        OddNumbersExterminator normalListToTest = new OddNumbersExterminator();
+                //When
+        List<Integer> evenNormalList = normalListToTest.createList(normalList);
+                //Then
         Assertions.assertEquals(normalListReference, evenNormalList);
     }
 }
