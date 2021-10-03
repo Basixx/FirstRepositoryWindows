@@ -97,13 +97,12 @@ public class ShapeCollectorTestSuite {
         Square square1 = new Square(16);
         Square square2 = new Square(64);
         ShapeCollector testedListToShow = new ShapeCollector(new ArrayList<>(Arrays.asList(circle2, square1, triangle1, triangle2, circle1, square2)));
-        ShapeCollector shapesCollection = new ShapeCollector((List<Shape>) testedListToShow);
 
         //when
-        testedListToShow.showFigures();
+        ArrayList<Shape> shapesCollection = testedListToShow.showFigures();
 
         //then
-        Assertions.assertEquals(testedListToShow, shapesCollection);
+        Assertions.assertEquals(testedListToShow.getShapesList(), shapesCollection);
 
     }
 }

@@ -13,17 +13,26 @@ public class ShapeCollector {
     }
 
     void addFigure(Shape shape){
-
+        shapesList.add(shape);
     }
     void removeFigure(Shape shape){
-
+        shapesList.remove(shape);
     }
     Shape getFigure(int n){
-        Square shapeX = new Square(15);
-        return shapeX;
+        if (n < shapesList.size() && n >=0){
+            return shapesList.get(n);
+        }
+        else{
+            return null;
+        }
     }
-    void showFigures(){
-
+    ArrayList<Shape> showFigures(){
+        ArrayList<Shape> showedFiguresList = new ArrayList<>();
+        for (Shape figure : shapesList){
+            System.out.println(figure);
+            showedFiguresList.add(figure);
+        }
+        return showedFiguresList;
     }
 
     public List<Shape> getShapesList(){
