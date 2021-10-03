@@ -6,7 +6,7 @@ public class Circle implements Shape{
 
     public Circle(double radius) {
         this.shapeName = "Circle";
-        this.field = Math.sqrt(radius)*3.14;
+        this.field = Math.sqrt(radius)*Math.PI;
     }
 
     public String getShapeName(){

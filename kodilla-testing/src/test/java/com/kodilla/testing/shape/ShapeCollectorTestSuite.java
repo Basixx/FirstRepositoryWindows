@@ -40,6 +40,7 @@ public class ShapeCollectorTestSuite {
 
         //then
         Assertions.assertEquals(testedListToAdd.getFigure(3), circle2);
+        Assertions.assertEquals(testedListToAdd.getShapesList().size(), 4);
     }
 
     @DisplayName("if removes a figure")
