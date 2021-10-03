@@ -58,7 +58,7 @@ class WeatherForecastTestSuite {
     }
 
     @Test
-    void testTemperatureMedianWithMock(){
+    void testTemperatureMedianIfOddWithMock(){
         //Given
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
@@ -68,5 +68,21 @@ class WeatherForecastTestSuite {
 
         //Then
         Assertions.assertEquals(25.5, medianTemperature);
+    }
+
+    @Test
+    void testTemperatureMedianIfEvenWithMock(){
+        //Given
+        temperaturesMap.put("Lodz", 27.1);
+        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
+        WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
+
+        //When
+        double medianTemperature = weatherForecast.temperatureMedian();
+
+        //Then
+        Assertions.assertEquals(25.8, medianTemperature);
+
+        temperaturesMap.remove("Lodz", 27.1);
     }
 }

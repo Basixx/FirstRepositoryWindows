@@ -14,6 +14,7 @@ public class TemperaturesStub implements  Temperatures{
         stubResult.put("Warszawa", 25.2);
         stubResult.put("Gdansk", 26.1);
 
+
         return stubResult;
     }
 }

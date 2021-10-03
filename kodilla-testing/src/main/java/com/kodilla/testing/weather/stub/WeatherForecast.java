@@ -34,10 +34,7 @@ public class WeatherForecast {
 
     public double temperatureMedian(){
         double median;
-        int quantityOfTemperatures =0;
-        for (Map.Entry<String, Double> temperature : temperatures.getTemperatures().entrySet()){
-            quantityOfTemperatures++;
-        }
+        int quantityOfTemperatures = temperatures.getTemperatures().entrySet().size();
         double[] temperaturesOrder = new double[quantityOfTemperatures];
         quantityOfTemperatures = 0;
         for (Map.Entry<String, Double> temperature : temperatures.getTemperatures().entrySet()){
