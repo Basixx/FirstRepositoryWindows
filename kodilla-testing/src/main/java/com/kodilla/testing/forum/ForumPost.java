@@ -1,6 +1,6 @@
 package com.kodilla.testing.forum;
 
-import java.util.Objects;
+import java.util.Objects; //TO MOŻNA USUNĄĆ
 
 public class ForumPost {
     private String postBody;

@@ -52,7 +52,7 @@ public class ForumTestSuite {
         //When
         String result = simpleUser.getUsername();
 
-        String expectedResult = "th eForumUser";
+        String expectedResult = "theForumUser";
 
         //Then
         Assertions.assertEquals(expectedResult, result);
