@@ -4,9 +4,9 @@ public class Circle implements Shape{
     private String shapeName;
     private double field;
 
-    public Circle(double field) {
+    public Circle(double radius) {
         this.shapeName = "Circle";
-        this.field = field;
+        this.field = Math.sqrt(radius)*3.14;
     }
 
     public String getShapeName(){

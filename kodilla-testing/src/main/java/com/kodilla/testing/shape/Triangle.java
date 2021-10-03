@@ -4,9 +4,9 @@ public class Triangle implements Shape{
     private String shapeName;
     private double field;
 
-    public Triangle(double field) {
+    public Triangle(double base, double height) {
         this.shapeName = "Triangle";
-        this.field = field;
+        this.field = base*height/2;
     }
 
     public String getShapeName(){

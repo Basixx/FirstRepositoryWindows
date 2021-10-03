@@ -24,14 +24,14 @@ public class ShapeCollectorTestSuite {
         System.out.println("Preparing to execute test #" + testCounter);
     }
 
-    @DisplayName ("czy dodaje figurę")
+    @DisplayName ("if adds a figure")
     @Test
 
     void testAddFigure(){
         //given
         Circle circle1 = new Circle(19);
         Circle circle2 = new Circle(82);
-        Triangle triangle = new Triangle(83);
+        Triangle triangle = new Triangle(83, 3);
         Square square = new Square(64);
        ShapeCollector testedListToAdd = new ShapeCollector(new ArrayList<>(Arrays.asList(circle1, triangle, square)));
 
@@ -39,16 +39,16 @@ public class ShapeCollectorTestSuite {
         testedListToAdd.addFigure(circle2);
 
         //then
-        Assertions.assertEquals(testedListToAdd.getShapesList().size(), 4);
+        Assertions.assertEquals(testedListToAdd.getFigure(3), circle2);
     }
 
-    @DisplayName("czy usuwa figurę")
+    @DisplayName("if removes a figure")
     @Test
 
     void testRemoveFigure(){
         //given
         Circle circle = new Circle(14);
-        Triangle triangle = new Triangle(17);
+        Triangle triangle = new Triangle(17, 5);
         Square square1 = new Square(25);
         Square square2 = new Square(81);
         ShapeCollector testedListToRemove = new ShapeCollector(new ArrayList<>(Arrays.asList(circle, triangle, square1, square2)));
@@ -60,15 +60,15 @@ public class ShapeCollectorTestSuite {
         Assertions.assertEquals(testedListToRemove.getShapesList().size(), 3);
     }
 
-    @DisplayName("czy pobiera figurę")
+    @DisplayName("if gets a figure")
     @Test
 
     void testGetFigure(){
         //given
         Circle circle1 = new Circle(7);
         Circle circle2 = new Circle(3);
-        Triangle triangle1 = new Triangle(23);
-        Triangle triangle2 = new Triangle(4);
+        Triangle triangle1 = new Triangle(23, 2);
+        Triangle triangle2 = new Triangle(4, 21);
         Square square1 = new Square(16);
         Square square2 = new Square(64);
         ShapeCollector testedListToGet = new ShapeCollector(new ArrayList<>(Arrays.asList(circle2, square1, triangle1, triangle2, circle1, square2)));
@@ -85,15 +85,15 @@ public class ShapeCollectorTestSuite {
 
     }
 
-    @DisplayName("czy pokazuje figury")
+    @DisplayName("if shows all figures")
     @Test
 
     void testShowFigures(){
         //given
         Circle circle1 = new Circle(7);
         Circle circle2 = new Circle(3);
-        Triangle triangle1 = new Triangle(23);
-        Triangle triangle2 = new Triangle(4);
+        Triangle triangle1 = new Triangle(23, 12);
+        Triangle triangle2 = new Triangle(4, 8);
         Square square1 = new Square(16);
         Square square2 = new Square(64);
         ShapeCollector testedListToShow = new ShapeCollector(new ArrayList<>(Arrays.asList(circle2, square1, triangle1, triangle2, circle1, square2)));
