@@ -88,7 +88,7 @@ public class ShapeCollectorTestSuite {
     @DisplayName("czy pokazuje figury")
     @Test
 
-    void showFigures(){
+    void testShowFigures(){
         //given
         Circle circle1 = new Circle(7);
         Circle circle2 = new Circle(3);
