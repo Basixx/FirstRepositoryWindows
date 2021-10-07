@@ -3,9 +3,9 @@ package com.kodilla.testing.forum.statistics;
 public class CountStatistics {
     private Statistics statistics;
 
-    double usersQuantity;
-    double postsQuantity;
-    double commentsQuantity;
+    int usersQuantity;
+    int postsQuantity;
+    int commentsQuantity;
     double averagePostsPerUser;
     double averageCommentsPerUser;
     double averageCommentsPerPost;
@@ -16,8 +16,8 @@ public class CountStatistics {
 
     public void calculateAdvStatistics() {
         usersQuantity = statistics.usersNames().size();
-        postsQuantity = statistics.postsCount();
-        commentsQuantity = statistics.commentsCount();
+        postsQuantity = (int) statistics.postsCount();
+        commentsQuantity = (int) statistics.commentsCount();
         if (statistics.usersNames().size() != 0) {
             averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size();
             averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();

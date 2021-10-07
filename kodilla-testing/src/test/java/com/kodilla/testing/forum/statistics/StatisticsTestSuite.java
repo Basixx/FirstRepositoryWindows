@@ -55,9 +55,9 @@ public class StatisticsTestSuite {
         countStatistics.calculateAdvStatistics();
 
         //then
-        Assertions.assertEquals(100, countStatistics.usersQuantity, 0.01);
-        Assertions.assertEquals(0, countStatistics.postsQuantity, 0.01);
-        Assertions.assertEquals(0, countStatistics.commentsQuantity, 0.01);
+        Assertions.assertEquals(100, countStatistics.usersQuantity);
+        Assertions.assertEquals(0, countStatistics.postsQuantity);
+        Assertions.assertEquals(0, countStatistics.commentsQuantity);
         Assertions.assertEquals(0, countStatistics.averagePostsPerUser, 0.01);
         Assertions.assertEquals(0, countStatistics.averageCommentsPerUser, 0.01);
         Assertions.assertEquals(0, countStatistics.averageCommentsPerPost, 0.01);
@@ -82,9 +82,9 @@ public class StatisticsTestSuite {
         //when
         countStatistics.calculateAdvStatistics();
         //then
-        Assertions.assertEquals(250, countStatistics.usersQuantity, 0.01);
-        Assertions.assertEquals(1000, countStatistics.postsQuantity, 0.01);
-        Assertions.assertEquals(3000, countStatistics.commentsQuantity, 0.01);
+        Assertions.assertEquals(250, countStatistics.usersQuantity);
+        Assertions.assertEquals(1000, countStatistics.postsQuantity);
+        Assertions.assertEquals(3000, countStatistics.commentsQuantity);
         Assertions.assertEquals(4, countStatistics.averagePostsPerUser, 0.01);
         Assertions.assertEquals(12, countStatistics.averageCommentsPerUser, 0.01);
         Assertions.assertEquals(3, countStatistics.averageCommentsPerPost, 0.01);
@@ -108,9 +108,9 @@ public class StatisticsTestSuite {
         //when
         countStatistics.calculateAdvStatistics();
         //then
-        Assertions.assertEquals(250, countStatistics.usersQuantity, 0.01);
-        Assertions.assertEquals(1000, countStatistics.postsQuantity, 0.01);
-        Assertions.assertEquals(0, countStatistics.commentsQuantity, 0.01);
+        Assertions.assertEquals(250, countStatistics.usersQuantity);
+        Assertions.assertEquals(1000, countStatistics.postsQuantity);
+        Assertions.assertEquals(0, countStatistics.commentsQuantity);
         Assertions.assertEquals(4, countStatistics.averagePostsPerUser, 0.01);
         Assertions.assertEquals(0, countStatistics.averageCommentsPerUser, 0.01);
         Assertions.assertEquals(0, countStatistics.averageCommentsPerPost, 0.01);
@@ -134,9 +134,9 @@ public class StatisticsTestSuite {
         //when
         countStatistics.calculateAdvStatistics();
         //then
-        Assertions.assertEquals(250, countStatistics.usersQuantity, 0.01);
-        Assertions.assertEquals(6000, countStatistics.postsQuantity, 0.01);
-        Assertions.assertEquals(3000, countStatistics.commentsQuantity, 0.01);
+        Assertions.assertEquals(250, countStatistics.usersQuantity);
+        Assertions.assertEquals(6000, countStatistics.postsQuantity);
+        Assertions.assertEquals(3000, countStatistics.commentsQuantity);
         Assertions.assertEquals(24, countStatistics.averagePostsPerUser, 0.01);
         Assertions.assertEquals(12, countStatistics.averageCommentsPerUser, 0.01);
         Assertions.assertEquals(0.5, countStatistics.averageCommentsPerPost, 0.01);
@@ -160,9 +160,9 @@ public class StatisticsTestSuite {
         //when
         countStatistics.calculateAdvStatistics();
         //then
-        Assertions.assertEquals(250, countStatistics.usersQuantity, 0.01);
-        Assertions.assertEquals(1000, countStatistics.postsQuantity, 0.01);
-        Assertions.assertEquals(1500, countStatistics.commentsQuantity, 0.01);
+        Assertions.assertEquals(250, countStatistics.usersQuantity);
+        Assertions.assertEquals(1000, countStatistics.postsQuantity);
+        Assertions.assertEquals(1500, countStatistics.commentsQuantity);
         Assertions.assertEquals(4, countStatistics.averagePostsPerUser, 0.01);
         Assertions.assertEquals(6, countStatistics.averageCommentsPerUser, 0.01);
         Assertions.assertEquals(1.5, countStatistics.averageCommentsPerPost, 0.01);
@@ -185,9 +185,9 @@ public class StatisticsTestSuite {
         //when
         countStatistics.calculateAdvStatistics();
         //then
-        Assertions.assertEquals(100, countStatistics.usersQuantity, 0.01);
-        Assertions.assertEquals(150, countStatistics.postsQuantity, 0.01);
-        Assertions.assertEquals(150, countStatistics.commentsQuantity, 0.01);
+        Assertions.assertEquals(100, countStatistics.usersQuantity);
+        Assertions.assertEquals(150, countStatistics.postsQuantity);
+        Assertions.assertEquals(150, countStatistics.commentsQuantity);
         Assertions.assertEquals(1.5, countStatistics.averagePostsPerUser, 0.01);
         Assertions.assertEquals(1.5, countStatistics.averageCommentsPerUser, 0.01);
         Assertions.assertEquals(1, countStatistics.averageCommentsPerPost, 0.01);
@@ -212,8 +212,8 @@ public class StatisticsTestSuite {
         Assertions.assertEquals(0, countStatistics.usersQuantity);
         Assertions.assertEquals(10, countStatistics.postsQuantity);
         Assertions.assertEquals(20, countStatistics.commentsQuantity);
-        Assertions.assertEquals(0, countStatistics.averagePostsPerUser);
-        Assertions.assertEquals(0, countStatistics.averageCommentsPerUser);
-        Assertions.assertEquals(2, countStatistics.averageCommentsPerPost);
+        Assertions.assertEquals(0, countStatistics.averagePostsPerUser, 0.01);
+        Assertions.assertEquals(0, countStatistics.averageCommentsPerUser, 0.01);
+        Assertions.assertEquals(2, countStatistics.averageCommentsPerPost, 0.01);
     }
 }
