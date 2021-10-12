@@ -16,18 +16,18 @@ public class CountStatistics {
 
     public void calculateAdvStatistics() {
         usersQuantity = statistics.usersNames().size();
-        postsQuantity = (int) statistics.postsCount();
-        commentsQuantity = (int) statistics.commentsCount();
+        postsQuantity =  statistics.postsCount();
+        commentsQuantity =  statistics.commentsCount();
         if (statistics.usersNames().size() != 0) {
-            averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size();
-            averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+            averagePostsPerUser = (double) statistics.postsCount() / statistics.usersNames().size();
+            averageCommentsPerUser = (double) statistics.commentsCount() / statistics.usersNames().size();
         } else {
             averagePostsPerUser = 0;
             averageCommentsPerUser = 0;
         }
 
         if (statistics.postsCount() != 0) {
-            averageCommentsPerPost = statistics.commentsCount() / statistics.postsCount();
+            averageCommentsPerPost = (double) statistics.commentsCount() / statistics.postsCount();
         } else {
             averageCommentsPerPost = 0;
         }

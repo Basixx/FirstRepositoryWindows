@@ -47,8 +47,8 @@ public class StatisticsTestSuite {
             usersCount.add("user" + i);
         }
 
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         when(statisticsMock.usersNames()).thenReturn(usersCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
@@ -76,8 +76,8 @@ public class StatisticsTestSuite {
         }
 
         when(statisticsMock.usersNames()).thenReturn(usersCount);
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
         countStatistics.calculateAdvStatistics();
@@ -102,8 +102,8 @@ public class StatisticsTestSuite {
         }
 
         when(statisticsMock.usersNames()).thenReturn(usersCount);
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
         countStatistics.calculateAdvStatistics();
@@ -128,8 +128,8 @@ public class StatisticsTestSuite {
         }
 
         when(statisticsMock.usersNames()).thenReturn(usersCount);
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
         countStatistics.calculateAdvStatistics();
@@ -154,8 +154,8 @@ public class StatisticsTestSuite {
         }
 
         when(statisticsMock.usersNames()).thenReturn(usersCount);
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
         countStatistics.calculateAdvStatistics();
@@ -179,8 +179,8 @@ public class StatisticsTestSuite {
             usersCount.add("user" + i);
         }
         when(statisticsMock.usersNames()).thenReturn(usersCount);
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
         countStatistics.calculateAdvStatistics();
@@ -203,8 +203,8 @@ public class StatisticsTestSuite {
 
 
         when(statisticsMock.usersNames()).thenReturn(usersCount);
-        when(statisticsMock.postsCount()).thenReturn((double) postsCount);
-        when(statisticsMock.commentsCount()).thenReturn((double) commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postsCount);
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         CountStatistics countStatistics = new CountStatistics(statisticsMock);
         //when
         countStatistics.calculateAdvStatistics();
