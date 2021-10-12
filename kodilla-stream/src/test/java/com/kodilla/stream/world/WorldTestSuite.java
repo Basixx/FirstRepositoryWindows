@@ -19,7 +19,7 @@ public class WorldTestSuite {
 
         Country china = new Country("China", new BigDecimal("837462341233253"));
         Country japan = new Country("Japan", new BigDecimal("429384572453405"));
-        Country india = new Country("India", new BigDecimal("293e8572348756"));
+        Country india = new Country("India", new BigDecimal("2938572348756"));
 
         Country kenya = new Country("Kenya", new BigDecimal("2387462837"));
         Country ethiopia = new Country("Ethiopia", new BigDecimal("387456387"));

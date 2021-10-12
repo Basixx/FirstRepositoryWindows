@@ -159,11 +159,11 @@ public class BoardTestSuite {
                 .flatMap(taskList -> taskList.getTasks().stream())
                 .map(Task::getCreated).forEach(System.out::println);
 
-        double daysSum = project.getTaskLists().stream()
+        int daysSum = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(taskList -> taskList.getTasks().stream())
                 .map(task -> task.getCreated().until(LocalDate.now(), ChronoUnit.DAYS))
-                .mapToDouble(Long::intValue)
+                .mapToInt(Long::intValue)
                 .sum();
 
         List<Task> task =  project.getTaskLists().stream()
@@ -171,7 +171,14 @@ public class BoardTestSuite {
                 .flatMap(taskList -> taskList.getTasks().stream())
                 .collect(toList());
 
-        double average = daysSum/task.size();
+        int taskSum = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(taskList -> taskList.getTasks().stream())
+                .mapToInt(element -> 1)
+                .sum();
+
+
+        double average = (double) daysSum/taskSum;
 
         //then
         Assertions.assertEquals(average, 10);

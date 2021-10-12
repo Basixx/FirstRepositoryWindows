@@ -47,6 +47,8 @@ public class StatisticsTestSuite {
             usersCount.add("user" + i);
         }
 
+
+
         when(statisticsMock.postsCount()).thenReturn(postsCount);
         when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         when(statisticsMock.usersNames()).thenReturn(usersCount);
