@@ -10,6 +10,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.temporal.ChronoUnit;
+import java.util.OptionalDouble;
 
 public class BoardTestSuite {
 
@@ -177,12 +178,19 @@ public class BoardTestSuite {
                 .mapToInt(element -> 1)
                 .sum();
 
+        double avrg = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(taskList -> taskList.getTasks().stream())
+                .map(t -> t.getCreated().until(LocalDate.now(), ChronoUnit.DAYS))
+                .mapToInt(Long::intValue)
+                .average().getAsDouble();
+
 
         double average = (double) daysSum/taskSum;
 
         //then
+        Assertions.assertEquals(avrg, 10);
         Assertions.assertEquals(average, 10);
-
 
 
 
