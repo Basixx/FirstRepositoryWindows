@@ -9,31 +9,23 @@ import org.junit.jupiter.api.Test;
 public class SecondChallengeTestSuite {
 
     @Test
-    void testSecondChallenge(){
+   void testProbablyWillThrowException(){
         //given
-        NumberChecker numberChecker = new NumberChecker();
+        SecondChallenge secondChallenge = new SecondChallenge();
 
         //when & then
-        assertDoesNotThrow(() -> numberChecker.checkNumbers(1.5, 2));
-    }
 
-    @Test
-    void testWhenWrongNumbers(){
-        //given
-        NumberChecker numberChecker = new NumberChecker();
-
-        //when & then
-        assertThrows(ExceptionHandling.class, () -> numberChecker.checkNumbers(3, 1.5));
-    }
-
-    @Test
-    public void testAllOptions() {
-        // given
-        NumberChecker numberChecker = new NumberChecker();
-        // when & then
         assertAll(
-                () -> assertThrows(ExceptionHandling.class, () -> numberChecker.checkNumbers(7,10)),
-                () -> assertDoesNotThrow(() ->numberChecker.checkNumbers(1.5,2))
+                //when both numbers are correct
+                () -> assertThrows(Exception.class, () -> secondChallenge.probablyIWillThrowException(2, 1.5)),
+                //when x is incorrect and y is correct
+                () -> assertThrows(Exception.class, () -> secondChallenge.probablyIWillThrowException(0, 0)),
+                //when x is corret and y is incorrect
+                () -> assertThrows(Exception.class, () -> secondChallenge.probablyIWillThrowException(1.5, 1.5)),
+                //when both numbers are incorrect
+                () -> assertDoesNotThrow(()-> secondChallenge.probablyIWillThrowException(1.5, 2))
+
         );
+
     }
 }
