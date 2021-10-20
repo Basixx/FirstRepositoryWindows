@@ -29,13 +29,18 @@ public class Game {
         System.out.println("Czy chcesz grać jeszcze raz? Wybierz:"  + System.lineSeparator() + "n - gramy jeszcze raz" + System.lineSeparator() + "x - kończymy na dziś");
         Scanner ifPlays = new Scanner(System.in);
         char move = ifPlays.next().charAt(0);
-        if (move == 'n') {
-            System.out.println("Ok! gramy jeszcze raz");
-            playWholeGame();
-        }
-        else if (move == 'x') {
-           System.out.println("Dzięki za grę!");
-        }
+        while (true)
+            if (move == 'n') {
+                System.out.println("Ok! gramy jeszcze raz");
+                playWholeGame();
+            } else if (move == 'x') {
+                System.out.println("Kończymy na dziś. Dzięki za grę!");
+                System.exit(0);
+            } else {
+                System.out.println("Wprowadziłeś błędną zmienną, zdecyduj jeszcze raz czy chcesz grać dalej");
+                move = ifPlays.next().charAt(0);
+            }
+
 
 
     }

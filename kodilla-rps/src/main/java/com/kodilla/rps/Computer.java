@@ -10,11 +10,11 @@ public class Computer {
         // 2 - Paper
         // 3 - Scissors
 
-        int computerMove = generator.nextInt(2);
+        int computerMove = generator.nextInt(3);
 
         if (computerMove == 0) System.out.println("Komputer wybrał kamień");
         else if (computerMove == 1) System.out.println("Komputer wybrał papier");
-        else if (computerMove == 2) System.out.println("Komputer wybrał nożyce");
+        else  System.out.println("Komputer wybrał nożyce");
         return computerMove;
     }
 
