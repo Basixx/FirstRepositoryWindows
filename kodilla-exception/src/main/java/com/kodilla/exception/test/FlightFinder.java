@@ -21,8 +21,9 @@ public class FlightFinder {
     }
 
     public void findFlight(Flight flight) throws RouteNotFoundException{
-        if (flightExamples.get(flight.getArrivalAirport()) != null){
-            if (flightExamples.get(flight.getArrivalAirport())){
+        Boolean flights = flightExamples.get(flight.getArrivalAirport());
+        if (flights != null){
+            if (flights){
                 System.out.println("Flight found");
             } else {
                 System.out.println("No flights to this destination found");
