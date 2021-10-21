@@ -7,7 +7,7 @@ public class Messages {
     public void youWin(){
         System.out.println("Brawo! Wygrałeś tę rundę!");
     }
-    public void remis(){
+    public void draw(){
         System.out.println("W tej rundzie mamy remis!");
     }
     public void wrongInput(){
