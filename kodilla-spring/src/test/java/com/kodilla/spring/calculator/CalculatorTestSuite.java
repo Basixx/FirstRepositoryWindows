@@ -3,6 +3,7 @@ package com.kodilla.spring.calculator;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class CalculatorTestSuite {
@@ -14,35 +15,35 @@ public class CalculatorTestSuite {
     public void testAdd(){
         //Given
         //When
-        calculator.add(34.4, 8.2);
+        double result = calculator.add(34.4, 8.2);
         //Then
-        //do nothing
+        assertEquals(result, 42.6, 2);
     }
 
     @Test
     public void testSubstract(){
         //Given
         //When
-        calculator.substract(109.44, 67.95);
+        double result = calculator.substract(109.44, 67.95);
         //Then
-        //do nothing
+        assertEquals(result, 41.49,2);
     }
 
     @Test
     public void testMultiply(){
         //Given
         //When
-        calculator.multiply(10.73, 12.86);
+        double result = calculator.multiply(10.7, 12.8);
         //Then
-        //do nothing
+        assertEquals(result, 136.96);
     }
 
     @Test
     public void testDivide(){
         //Given
         //When
-        calculator.divide(375.58, 12.94);
+        double result = calculator.divide(197.28, 13.7);
         //Then
-        //do nothing
+        assertEquals(result, 14.4, 2);
     }
 }
