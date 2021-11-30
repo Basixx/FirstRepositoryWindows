@@ -9,4 +9,16 @@ public class TaskList {
     public TaskList() {
         this.tasks = new ArrayList<>();
     }
+
+    public void add(String text) {
+        tasks.add(tasks.size(), text);
+    }
+
+    public String getElement(int i) {
+        return tasks.get(i);
+    }
+
+    public int getSize() {
+        return tasks.size();
+    }
 }

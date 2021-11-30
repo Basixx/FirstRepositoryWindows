@@ -12,6 +12,7 @@ public final class Library {
     private LibraryDbController libraryDbController;
 
     public Library(final LibraryDbController libraryDbController) {
+
         this.libraryDbController = libraryDbController;
     }
 
