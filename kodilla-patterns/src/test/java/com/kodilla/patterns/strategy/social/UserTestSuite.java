@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTestSuite {
     @Test
-    void testDefaultPublishers(){
+    void testDefaultSharingStrategies(){
         //given
         User mike = new Millenials("Mike");
         User jacob = new YGeneration("Jacob");
@@ -27,7 +27,7 @@ public class UserTestSuite {
     }
 
     @Test
-    void testIndividualPublisher(){
+    void testIndividualSharingStrategy(){
         //given
         User richard = new ZGeneration("Richard");
 
