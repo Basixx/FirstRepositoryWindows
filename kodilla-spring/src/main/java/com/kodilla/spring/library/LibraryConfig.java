@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class LibraryConfig {
-//XDDDDD
+
     @Bean
     public Library library() {
         return new Library(libraryDbController());
