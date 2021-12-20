@@ -18,6 +18,7 @@ class TaskListDaoTestSuite {
     private static final String LISTNAME = "List one";
     private static final String DESCRIPTION = "list of cleaning tasks";
 
+
     @Autowired
     private TaskListDao taskListDao;
 
