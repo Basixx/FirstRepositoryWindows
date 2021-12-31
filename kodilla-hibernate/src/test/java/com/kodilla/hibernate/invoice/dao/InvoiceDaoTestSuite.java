@@ -44,14 +44,23 @@ public class InvoiceDaoTestSuite {
 
         //When
         productDao.save(product);
+        int idProd1 = product.getId();
         productDao.save(product2);
+        int idProd2 = product2.getId();
         invoiceDao.save(invoice);
+        int idInv = invoice.getId();
         itemDao.save(item);
+        int idItem1 = item.getId();
         itemDao.save(item2);
-        int id = invoice.getId();
+        int idItem2 = item2.getId();
+
 
         //Then
-        assertNotEquals(0, id);
+        assertNotEquals(0, idProd1);
+        assertNotEquals(0, idProd2);
+        assertNotEquals(0, idInv);
+        assertNotEquals(0, idItem1);
+        assertNotEquals(0, idItem2);
 
         //CleanUp
         productDao.deleteAll();
