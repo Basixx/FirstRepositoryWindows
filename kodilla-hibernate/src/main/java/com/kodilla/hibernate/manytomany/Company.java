@@ -10,6 +10,10 @@ import java.util.List;
         query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :FIRSTTHREE",
         resultClass = Company.class
 )
+@NamedQuery(
+        name = "Company.RetrieveCompaniesWithName",
+        query = "FROM Company WHERE name LIKE '%Machines%'"
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
