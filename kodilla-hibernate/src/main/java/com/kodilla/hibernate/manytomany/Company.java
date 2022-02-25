@@ -11,8 +11,8 @@ import java.util.List;
         resultClass = Company.class
 )
 @NamedQuery(
-        name = "Company.RetrieveCompaniesWithName",
-        query = "FROM Company WHERE name LIKE '%Machines%'"
+        name = "Company.retrieveCompaniesWithName",
+        query = "FROM Company WHERE name LIKE :FRAGMENT"
 )
 @Entity
 @Table(name = "COMPANIES")

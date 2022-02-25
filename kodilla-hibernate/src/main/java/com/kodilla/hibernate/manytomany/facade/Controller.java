@@ -17,12 +17,12 @@ public class Controller {
         this.employeeDao = employeeDao;
     }
 
-    public List retrieveCompaniesByName(){
-        return companyDao.RetrieveCompaniesWithName();
+    public List retrieveCompaniesByName(String fragment){
+        return companyDao.retrieveCompaniesWithName(fragment);
     }
 
-    public List retrieveEmployeesByName(){
-        return employeeDao.RetrieveEmployeesWithName();
+    public List retrieveEmployeesByName(String fragment){
+        return employeeDao.retrieveEmployeesWithName(fragment);
     }
 
     public void saveCompany(Company company){
