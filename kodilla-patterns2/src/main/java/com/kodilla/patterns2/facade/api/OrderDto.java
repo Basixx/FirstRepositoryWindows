@@ -11,4 +11,13 @@ public class OrderDto {
     public List<ItemDto> getItems() {
         return items;
     }
+
+    @Override
+    public String toString(){
+        String ids = "";
+        for (ItemDto item : items){
+            ids += " -> " + item.getProductId().toString();
+        }
+        return ids;
+    }
 }
